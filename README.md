@@ -47,6 +47,55 @@ This repository contains the official ZK-Neura frontend application.
 
 ### 1. Clone
 
-```bash
+
 git clone https://github.com/zk-neura/zkneura-dapp
 cd zkneura-dapp
+
+### 2. Install Dependencies
+npm install
+
+### 3. Environment Setup
+cp .env.example .env.local
+
+
+NEXT_PUBLIC_SOLANA_CLUSTER=devnet
+VERCEL_AI_GATEWAY_URL=
+OPENAI_API_KEY=
+
+### 4. Start Development Server
+npm run dev
+
+
+The application runs at:
+http://localhost:3000
+
+Production Build
+npm run build
+
+
+Deployment via Vercel is recommended.
+
+Project Structure
+src/
+  app/            # Routes (Next.js App Router)
+  components/     # UI components
+  lib/            # Helpers & libraries
+  store/          # Zustand state management
+  hooks/          # Custom hooks
+  utils/          # Utilities & crypto helpers
+  styles/         # Global styles
+public/           # Static assets
+docs/             # Internal documentation
+
+Security Notes
+
+ZK-Neura stores no medical data on servers.
+All data remains local to the user's device, encrypted and wallet-scoped.
+Always keep your wallet secure and back up your recovery phrase.
+For vulnerability reports, contact:
+security@zkneura.xyz
+Contributing
+Please read CONTRIBUTING.md for the development workflow, coding standards, and pull request guidelines.
+License
+
+Tis project is licensed under the MIT License.
